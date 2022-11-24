@@ -46,9 +46,9 @@ labor_primary, lasting_investment, no_lasting_investmen])
    predict=model.predict([features])  
    probab = model.predict_proba([features])    
    if(predict ==1):
-      return{"ans":"Customer will leave  leave the bank with {} Probability".format(probab[0][1])}
+      return{"ans":"You are likely to have Depression with {} Probability".format(probab[0][1])}
    else:
-      return{"ans":"Customer will not leave the bank with {} Probability".format(probab[0][0])}
+      return{"ans":"You did not have the Depression with {} Probability".format(probab[0][0])}
 
 if __name__ == "__main__":
   uvicorn.run(app)
